@@ -16,7 +16,6 @@ public class WeatherController {
         model.addAttribute("location", new Location());
         return "requestweather";
     }
-}
     @RequestMapping(value="/viewweather", method=RequestMethod.POST)
     public String viewWeather(@ModelAttribute Location location, Model model) {
         //WeatherForecast weatherForecast = weatherInterface.getWeather(location);
@@ -25,3 +24,4 @@ public class WeatherController {
         model.addAttribute("location", location);
         return "viewweather";
     }
+}
