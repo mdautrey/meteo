@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Recherche de la météo pour une ville</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/viewweather}" th:object="${location}" method="post">
+    <p>Code pays: <input type="text" th:field="${location.codePays}" /></p>
+    <p>Code ville: <input type="text" th:field="${location.codeVille}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
