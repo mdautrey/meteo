@@ -10,14 +10,14 @@
     and you can create as many subgroups as you want
     -->
 
-    <groupId>TPEnssat2015</groupId>
+    <groupId>meteo</groupId>
 
     <!--
     artifactId is the name of the jar without version. If you created it then you can choose
     whatever name you want with lowercase letters and no strange symbols.
     If it's a third party jar you have to take the name of the jar as it's distributed.-->
 
-    <artifactId>TPEnssat2015</artifactId>
+    <artifactId>meteo</artifactId>
     <version>0.0.0</version>
 
     <parent>
@@ -27,7 +27,7 @@
     </parent>
 
     <properties>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
