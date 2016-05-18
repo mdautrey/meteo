@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class WeatherController {
-    @RequestMapping(value={"/requestweather", "/"}, method=RequestMethod.GET)
+    @RequestMapping(value={"/requestweather", "/", "/meteo"}, method=RequestMethod.GET)
     public String requestWeather(Model model) {
         model.addAttribute("location", new Location());
         return "requestweather";
