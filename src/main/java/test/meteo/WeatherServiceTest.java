@@ -1,8 +1,11 @@
 package test.meteo; 
 
-import org.junit.Test; 
+import meteo.WeatherService;
+import org.junit.Assert;
+import org.junit.Test;
 import org.junit.Before; 
-import org.junit.After; 
+import org.junit.After;
+import meteo.Location;
 
 /** 
 * WeatherService Tester. 
@@ -11,10 +14,14 @@ import org.junit.After;
 * @since <pre>mai 19, 2016</pre> 
 * @version 1.0 
 */ 
-public class WeatherServiceTest { 
+public class WeatherServiceTest  {
+    Location location;
 
 @Before
-public void before() throws Exception { 
+public void before() throws Exception {
+    location = new Location();
+    location.setCodePays("FR");
+    location.setCodeVille("Paris");
 } 
 
 @After
@@ -26,10 +33,13 @@ public void after() throws Exception {
 * Method: getWeatherForecast(Location location) 
 * 
 */ 
-@Test
-public void testGetWeatherForecast() throws Exception { 
-//TODO: Test goes here... 
-} 
+@Test(expected = org.springframework.web.client.HttpClientErrorException.class)
+public void testApiKeyOK() throws Exception {
+    WeatherService weatherService = new WeatherService();
+    Assert.assertNotNull(weatherService.getWeatherForecast(location));
+    weatherService.setAPIKey("");
+    weatherService.getWeatherForecast(location);
+}
 
 
 } 

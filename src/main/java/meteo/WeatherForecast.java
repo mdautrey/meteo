@@ -11,10 +11,6 @@ public class WeatherForecast {
      */
     // http://wiki.fasterxml.com/JacksonInFiveMinutes
 
-
-    /*
-    A COMPLETER
-     */
     public static class Coord {
         private String _lon, _lat;
 
@@ -55,5 +51,8 @@ public class WeatherForecast {
         to_s += _coord.toString();
         to_s += _main.toString();
         return to_s;
+    }
+    public String getText(){
+        return this.toString();
     }
 }
