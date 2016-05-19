@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
     public final WeatherForecast getWeatherForecast(Location location) {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-        String url = String.format(URI, location.getCodeVille(), location.getCodePays(), APIKey);
+        String url = String.format(URI, location.getCodeVille(), location.getCodePays(), APIKey);// ATTENTION INJECTION DE CODE
         WeatherForecast weatherForecast = restTemplate.getForObject(url, WeatherForecast.class);
         return weatherForecast;
     }
