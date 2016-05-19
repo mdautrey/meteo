@@ -28,18 +28,13 @@ public void before() throws Exception {
 public void after() throws Exception { 
 } 
 
-/** 
-* 
-* Method: getWeatherForecast(Location location) 
-* 
-*/ 
+
 @Test(expected = org.springframework.web.client.HttpClientErrorException.class)
-public void testApiKeyOK() throws Exception {
+public void testGetWeatherForecast() throws Exception {
     WeatherService weatherService = new WeatherService();
     Assert.assertNotNull(weatherService.getWeatherForecast(location));
     weatherService.setAPIKey("");
     weatherService.getWeatherForecast(location);
 }
-
 
 } 

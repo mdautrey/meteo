@@ -8,6 +8,7 @@
 <h1>Prévisions météo</h1>
 <p th:text="'Ville : ' + ${weatherforecast.name}" />
 <p th:text="'location :' + ${location.codeVille}" />
+<p th:text="${weatherforecast.text}" />
 <a href="/requestweather">Autre prévision</a>
 </body>
 </html>
