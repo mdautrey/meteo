@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
         //String url = String.format(URI, location.getCodeVille(), location.getCodePays(), APIKey);
         //WeatherForecast weatherForecast = restTemplate.getForObject(url, WeatherForecast.class);
         WeatherForecast weatherForecast = new WeatherForecast();
+        weatherForecast.setName("Test du câblage");
         return weatherForecast;
     }
 }
