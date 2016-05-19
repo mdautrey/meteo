@@ -12,6 +12,9 @@ import org.springframework.stereotype.Service;
 public class TwitterService {
     @AfterReturning(pointcut = "execution(* getWeather(..))", returning = "retVal")
     public void sendTweet(Object retVal){
-        System.out.println("Aspect !");
+        System.err.println("\n\n**********\n\nAspect !\n" +
+                "\n" +
+                "**********\n" +
+                "\n");
     }
 }
