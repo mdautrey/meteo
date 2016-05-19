@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @Service public class WeatherService implements WeatherInterface {
 
-    private String URI = "http://api.openweathermap.org/data/2.5/weather?q=%s,%s&APPID=%s";
+    private static String URI = "http://api.openweathermap.org/data/2.5/weather?q=%s,%s&APPID=%s";
 
     private String APIKey = "7c4212f5744f459bb53b3b0dbc87a12e";
 
